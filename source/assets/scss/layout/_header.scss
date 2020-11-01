@@ -1,5 +1,5 @@
 .page-header {
-    background: $brand-color-dark;
+    background: #006633;
     position: relative;
 
     .barra-dots {
@@ -14,7 +14,7 @@
         content: '';
         border-style: solid;
         border-width:50px 50px 0px 50px;
-        border-color: $brand-color-dark transparent transparent transparent;
+        border-color: #006633 transparent transparent transparent;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -52,7 +52,7 @@
 
 .theme-dark {
     .page-header {
-        background-color: $brand-color-dark;
+        background-color: #006633;
     }    
     .curso-subtitulo,
     .curso-titulo,
