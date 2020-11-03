@@ -35,7 +35,7 @@
   },
   {
     "id": 5,
-    "icon": "fa fa-file-text",
+    "icon": "fa fa-play",
     "slug": "metodos_aplicacion",
     "title": "1.4 Métodos de aplicación",    
     "path": "pages/tema-1-4.html"    
@@ -49,14 +49,14 @@
   }, 
   {
     "id": 7,
-    "icon": "fa fa-file-text",
+    "icon": "fa fa-play",
     "slug": "buenas_practicas",
     "title": "3. Buenas prácticas de manejo de plagas",    
     "path": "pages/tema-3.html"    
   },  
   {
     "id": 8,
-    "icon": "fa fa-file-text",
+    "icon": "fa fa-play",
     "slug": "clasificacion",
     "title": "3.1 Clasificación",    
     "path": "pages/tema-3-1.html"  
