@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Manejo racional de productos y plagas</title>
+        <meta meta name="description" content="Equipo de Ecosistema de recursos educativos SENA encargado del desarrollo y rediseño de cursos virtuales de aprendizaje para el SENA.">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#ResultadosAprendizaje"><span class="text-white">Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#IndiceTematico"><span class="text-white">Contenidos</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#Creditos"><span class="text-white">Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">Manejo Racional de Plaguicidas </h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Manejo racional de productos y plagas</h1>
+                                <div class="brand-line-primary"></div>
+                                <p class="curso-descripcion">El conocimiento a fondo de los plaguicidas es fundamental para realizar un manejo racional y eficiente de las plagas y enfermedades. Por lo anterior, esta unidad se fundamenta en temas relacionados con la formulación, dosificación y el procedimiento adecuado de la elaboración de mezclas de aplicación, donde es fundamental el conocimiento de las etiquetas y en ellas, los ingredientes activos y la compatibilidad entre ellos. </p>
+                                <p class="curso-descripcion">La aplicación de guías de manejo que incluyan pautas claras acerca del uso de los elementos de protección personal y el cumplimiento de la normatividad vigente es requisito en toda empresa donde se manipulen este tipo de productos. </p>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="mb-0">
+                            <li class="mb-3"><strong>220201032-04.</strong> Ajustar condiciones en la aplicación de plaguicidas a partir de los resultados de la revisión.</li>
+                            <li class="mb-0"><strong>220201032-03.</strong> Revisar los resultados de la aplicación de plaguicidas con base en parámetros técnicos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">Manejo racional de plaguicidas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Salud, seguridad, reglamento, guías de manejo</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">3</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-3">Buenas prácticas de manejo de plagas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-3">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="tema-1">
+                <div class="container" id="tema_1">
+                    <div class="header-ecored">
+                        <h1>1. Manejo racional de plaguicidas </h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center my-5"><img class="img-fluid" src="assets/images/pages/tema_1/img_1_01.jpg" alt=""></div>
+                            <div class="col-12">
+                                <p>El conocimiento a fondo de los plaguicidas es fundamental para realizar un manejo racional y eficiente de las plagas y enfermedades. Por lo anterior, esta unidad se fundamenta en temas relacionados con la formulación, dosificación y el procedimiento adecuado de la elaboración de mezclas de aplicación, donde es fundamental el conocimiento de las etiquetas y en ellas, los ingredientes activos y la compatibilidad entre ellos. </p>
+                                <p>La aplicación de guías de manejo que incluyan pautas claras acerca del uso de los elementos de protección personal y el cumplimiento de la normatividad vigente es requisito en toda empresa donde se manipulen este tipo de productos. </p>
+                                <p class="mb-0">El conocimiento del organismo a controlar es muy importante para la definición de aspectos como el tipo de productos a utilizar, el tipo de formulación, el método, época y dosis a aplicar, por ello es relevante estudiar los ciclos de vida y estructuras reproductoras de los organismos y el umbral de daño que ha ejercido este sobre el o los individuos de interés sanitario. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_1">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>1.1 Formulación, manejo de dosis y mezclas</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/PibpWfJ2jT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p>“Para el manejo racional de plaguicidas es fundamental el conocimiento de los productos a aplicar, así como la formulación, los tipos de formulaciones, el manejo apropiado para las dosis recomendadas y el procedimiento para realizar una mezcla.”</p>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center my-5"><img class="img-fluid" src="assets/images/pages/tema_1/img_1_1_01.svg" alt=""></div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center my-5"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_1_01.svg" alt=""></div>
+                        </div>
+                        <div class="hr-divider my-5"></div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img src="assets/images/icons/icon_duoble_chevron.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <h3 class="mb-3">Manejo de dosis</h3>
+                                        <p class="mb-0">Dosis es la cantidad de producto plaguicida que se debe aplicar en áreas determinadas. Las dosis vienen sugeridas en la etiqueta del producto, sin embargo, es de resaltar que la prescripción debe realizarla el profesional autorizado y con tarjeta profesional vigente.</p>
+                                        <p>La dosificación de un producto se realiza teniendo en cuenta que:</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center my-5"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_1_02.svg" alt=""></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <p><strong>Ejemplo:</strong> La dosis recomendada en una etiqueta está en un rango de 1 a 1.5 litros por hectárea, esto en un cultivo de frijol; para un cultivo de papa puede ser de 1.5 a 3 litros por hectárea. Siempre dependiendo de la edad del cultivo y del umbral de daño, se pueden elegir dosis baja, media o alta dentro del rango sugerido. Es importante señalar que los agroquímicos pueden encontrarse en polvo o gránulos, por lo que las dosis serían en gramos o kilogramos por hectárea.</p>
+                                <p>Teniendo en cuenta que La Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO por sus siglas en inglés), junto con la Organización Mundial de la Salud (OMS, en inglés WHO - World Health Organization), han emitido el Manual sobre elaboración y empleo de las especificaciones de la FAO y de la OMS para Plaguicidas, es indispensable revisar la información contenida en cuanto a formulaciones en la página oficial de la FAO, la cual puede consultar en el siguiente enlace:</p>
+                            </div>
+                            <div class="col-auto mt-5"> <a href="http://www.fao.org/agriculture/crops/mapa-tematica-del-sitio/theme/pests/jmps/manual/es/" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_www.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0">NSP - Manual sobre desarrollo y utilización de las especificaciones de FAO y de OMS para plaguicidas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center mb-5"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_1_03.svg" alt=""></div>
+                        </div>
+                        <div class="hr-divider my-5"></div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img src="assets/images/icons/icon_duoble_chevron.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <h3 class="mb-4">Manejo de mezclas</h3>
+                                        <p>A continuación, se presentan las normas para la preparación de la mezcla: </p>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Comprobar el correcto funcionamiento del equipo de aplicación.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Leer de manera completa el contenido de la etiqueta del producto.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Elegir la dosis correcta para cultivo, densidad, área, concentración del producto, etc.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Aplicar medidas de precaución durante la manipulación del producto concentrado, usando el equipo de protección correspondiente, evitando el contacto con la piel y ojos.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Preparar la mezcla en lugar abierto, de espaldas al viento, y con agua limpia.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Alistar los materiales para la medición del producto: gramera, pesos, recipientes, embudos, los cuales deben lavarse después de su uso (exclusivo para esta labor).</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Calcular el volumen de mezcla de acuerdo con el área a aplicar y la edad del cultivo.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Para sólidos solubles, disolver en un balde antes de mezclar en el tanque de aplicación.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Los líquidos pueden ir directamente al tanque de aplicación con la mitad del agua requerida para el volumen de aplicación.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Cuando se requiera más de un producto, la mezcla se realizará si son compatibles y no representan un riesgo para el cultivo, el medio ambiente o el ser humano y siguiendo el orden de adición de estos.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Si el producto se termina antes de cubrir el área, el tanque debe lavarse 3 veces y adicionar ese sobrante al tanque de tratamiento.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Emplear la mezcla antes de que transcurra el día, con el fin de evitar la pérdida de sus propiedades. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 col-lg-10 d-flex justify-content-center mb-5"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_1_04.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_1_2">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>1.2 Categoría toxicológica</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <p>En la unidad número uno, se dieron a conocer las categorías toxicológicas, sin embargo, es importante conocer cómo se emiten esos conceptos toxicológicos y la importancia de manejar adecuadamente esta información, siempre de acuerdo con la normatividad vigente: </p>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img src="assets/images/icons/icon_duoble_chevron.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <h3 class="mb-3">Concepto toxicológico</h3>
+                                        <p>Para emitir el concepto toxicológico de un producto, se verifican y validan los estudios de toxicidad de los plaguicidas, evaluando los riesgos de toxicidad de acuerdo normatividad vigente y con base en el conocimiento actual del o los ingredientes activos que hacen parte de la formulación, para posteriormente emitir tal concepto o dictamen técnico, requisito ante la autoridad competente para realizar el registro de los plaguicidas.</p>
+                                        <p>El trámite va dirigido a usuarios que requieran registrar un plaguicida que será usado en el país.</p>
+                                        <p>El Gobierno Nacional mediante el Decreto 4109 de 2011, numeral 4, designó al Instituto Nacional de Salud, para: “Emitir conceptos sobre clasificación toxicológica y evaluación del riesgo de toxicidad de plaguicidas de uso en el país.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_2_01.svg" alt=""></div>
+                            <div class="col-12">
+                                <div class="jumbotron" style="background-image:#D87B61;">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <div class="jumbotron bg-white mb-0">
+                                                <p class="mb-4">Algunas de las funciones del Ministerio de salud son:</p>
+                                                <div class="list mb-3">
+                                                    <div class="list__item">
+                                                        <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="list__txt">
+                                                        <p class="mb-0">Expedir concepto técnico toxicológico por medio de los artículos 13, 142 a 145 del Decreto 1843 de 1991.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list mb-3">
+                                                    <div class="list__item">
+                                                        <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="list__txt">
+                                                        <p class="mb-0">Expedir dictamen técnico toxicológico para todos los productos plaguicidas químicos de uso agrícola.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list mb-5">
+                                                    <div class="list__item">
+                                                        <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="list__txt">
+                                                        <p class="mb-0">Expedir los Actos Administrativos de modificación a los contenidos de los conceptos técnico-toxicológicos, titulares (cesiones y cambios de las razones sociales) y nombres de los productos en desarrollo de los artículos 13, 141, y 142, 144 y 145.</p>
+                                                    </div>
+                                                </div>
+                                                <p class="mb-4">De igual manera, lo relacionado con los siguientes trámites, serán de competencia del Ministerio de salud y Protección Social:</p>
+                                                <div class="list mb-3">
+                                                    <div class="list__item">
+                                                        <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="list__txt">
+                                                        <p class="mb-0">Expedir el Registro Sanitario para plaguicidas de uso en salud pública.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list mb-3">
+                                                    <div class="list__item">
+                                                        <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="list__txt">
+                                                        <p class="mb-0">Expedir los vistos buenos de importación a través de la Ventanilla única de comercio exterior (VUCE).</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list mb-3">
+                                                    <div class="list__item">
+                                                        <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="list__txt">
+                                                        <p class="mb-0">Expedir los permisos de experimentación de plaguicidas.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list mb-3">
+                                                    <div class="list__item">
+                                                        <div class="list__item__icon"><img src="assets/images/icons/icon_single_chevron.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="list__txt">
+                                                        <p class="mb-0">Realizar las autorizaciones de publicidad.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img src="assets/images/icons/icon_duoble_chevron.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <h3 class="mb-3">Toxicidad del producto formulado</h3>
+                                        <p>Los datos de toxicidad aguda del producto formulado permiten establecer la toxicidad de este incluyendo los aditivos y otros ingredientes activos, si el producto formulado contiene más de un ingrediente activo; determinando de esta manera el peligro inmediato a la salud humana, así como la atención inicial y el tratamiento médico. A su vez, los datos sobre toxicidad aguda son útiles para identificar las medidas enfocadas a prevenir intoxicaciones accidentales y que pueden ser usados para establecer frases de advertencia en las etiquetas, tales como el uso de elementos de protección personal para los aplicadores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_1/img_1_2_01.png" alt=""></div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img src="assets/images/icons/icon_duoble_chevron.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <h3 class="mb-3">Toxicidad del ingrediente activo</h3>
+                                        <p>Los datos de toxicidad aguda del ingrediente activo indican cualquier peligro a la salud humana derivados de una probable exposición a corto plazo. Los datos relacionados con efectos subcrónicos, crónicos, mutagenicidad, carcinogenicidad, efectos en la reproducción y toxicidad del desarrollo, proveen información que permite determinar el riesgo que los plaguicidas poseen para la salud humana luego de una exposición prolongada o repetida. </p>
+                                        <p>Estos estudios son generalmente desarrollados con el ingrediente activo para probar si este induce efectos adversos en los mamíferos. Los resultados de dichos estudios, con datos o estimados de exposición y factores de incertidumbre para la respectiva extrapolación de datos, son usados para valorar el riesgo resultante a la salud humana a partir de la exposición a los ingredientes activos de los plaguicidas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_1/img_1_2_02.png" alt=""></div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <p>En la Resolución 2075 de 2019. Comunidad Andina. (Anexo 8), la clasificación toxicológica de los Plaguicidas químicos de uso agrícola, en adelante PQUA, se hace con base en los estudios de toxicología aguda del producto formulado, en adelante PF (DL50 oral, cutánea, e inhalatoria cuando corresponda) y la evaluación toxicológica del PQUA, del ingrediente activo grado técnico, en adelante TC y del PF, según corresponda. Además, cuando se evidencian elementos de importancia toxicológica cuantificados para confirmar su relevancia toxicológica como impurezas del ingrediente activo, aditivos del PF y metabolitos, la Autoridad Nacional Competente (ANC) requerirá de estudios complementarios con fines de evaluación toxicológica humana.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img src="assets/images/icons/icon_duoble_chevron.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <h3 class="mb-3">Clasificación toxicológica, según SGA </h3>
+                                        <p>La clasificación de toxicidad aguda, oral, cutánea e inhalatoria se considerará a partir del cuadro N°1 del anexo 5.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img src="assets/images/icons/icon_duoble_chevron.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <h3 class="mb-3">Criterios de clasificación </h3>
+                                        <p>La clasificación se basa en: </p>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__bulletNumber"><span>A</span></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Toxicidad aguda oral en ratas o en otros roedores, establecida mediante la Dosis Letal Media (DL50). </p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__bulletNumber"><span>B</span></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Toxicidad aguda cutánea en rata, conejo o cobayo, establecida mediante la Dosis Letal Media (DL50). </p>
+                                            </div>
+                                        </div>
+                                        <div class="list mb-3">
+                                            <div class="list__item">
+                                                <div class="list__item__bulletNumber"><span>C</span></div>
+                                            </div>
+                                            <div class="list__txt">
+                                                <p class="mb-0">Toxicidad aguda inhalatoria en rata, establecida mediante la Concentración Letal Media (CL50), cuando corresponda. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 col-lg-10 d-flex justify-content-center my-5"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_2_02.svg" alt="" style="width:100%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_1_3">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>1.3 Modos y mecanismos de acción </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12 mb-4">
+                                <p><strong>El modo de acción</strong> hace referencia a la manera como el producto puede llegar a afectar al organismo; ejemplo: al contacto con el organismo o al actuar dentro del organismo en uno de sus sistemas vitales.</p>
+                                <p>Los modos de acción están determinados por el tipo de producto y organismo a controlar, de acuerdo con la siguiente información:</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="jumbotron mb-0">
+                                    <p class="mb-0"><strong>Mecanismo de acción</strong> se refiere al proceso biológico que afecta el producto en el organismo a controlar (conjunto de eventos que conducen a la muerte de ese individuo). Ejemplo: inhibición de la síntesis de aminoácidos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 col-lg-9 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_3_01.svg" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 col-lg-9 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_3_02.svg" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto mt-5"> <a href="media/documentos/Anexo_6_Modo_de_accion_de_herbicidas.pdf" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_pdf.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0"><strong>Anexo 6:</strong> Modos de acción de los herbicidas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_1_4">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>1.4 Métodos de aplicación </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-6">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/gykH43KHWoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12 col-lg-11 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_1/info_1_4_01.svg" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto mt-5"> <a href="media/documentos/Anexo_7_No_utilizar_el_sanitario.pdf" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_pdf.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0"><strong>Anexo 7:</strong> No utilizar el sanitario</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container" id="tema_2">
+                    <div class="header-ecored">
+                        <h1>2. Salud, seguridad, reglamento, guías de manejo </h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <div class="row justify-content-center mb-3">
+                            <div class="col-12 d-flex justify-content-center my-5"><img class="img-fluid" src="assets/images/pages/tema_2/info_2_01.svg" alt=""></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto mt-5"> <a href="media/documentos/Anexo_8_Resolucion_2075.pdf" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_pdf.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0"><strong>Anexo 8:</strong> Resolución 2075 de 2019. Comunidad Andina</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_2">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>2.1 Elaboración del manual de control de manejo de plaguicidas</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 d-flex justify-content-center my-5"><img class="img-fluid" src="assets/images/pages/tema_2/img_2_1_01.png" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-12">
+                                <p class="mb-5">Es importante tener en cuenta algunos hábitos para el buen uso de los plaguicidas e incluirlos en el plan de manejo de los productos y diligenciamiento de formatos y guías, como componentes indispensables para los planes de manejo de plaguicidas; para ello es importante tener en cuenta los siguientes aspectos: </p>
+                                <div class="list mb-3">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>1</span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Manera de usar el manual.</p>
+                                    </div>
+                                </div>
+                                <div class="list mb-3">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>2</span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Finalidad del manual.</p>
+                                    </div>
+                                </div>
+                                <div class="list mb-3">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>3</span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Condiciones técnicas y normativas de transporte de plaguicidas.</p>
+                                    </div>
+                                </div>
+                                <div class="list mb-3">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>4</span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Es importante resaltar las medidas de prevención de incidentes y accidentes (uso de elementos de protección personal, materiales y métodos a emplear), e incluir las medidas ante incidentes y accidentes provocados por derrames u otros. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto mt-5"> <a href="media/documentos/Anexo_6_ Plantilla_Plan_de_Manejo.pdf" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_pdf.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0"><strong>Anexo 6.</strong> Plan de manejo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-3">
+                <div class="container" id="tema_3">
+                    <div class="header-ecored">
+                        <h1>3. Buenas prácticas de manejo de plagas</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>Generalidades de las plagas </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/-QygkMYSFMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_3">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>3.1 Clasificación</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-6">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/gS80Wl3iQPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-6">
+                            <div class="col-12 col-lg-9 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_3/info_3_2_01.png" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center mb-6">
+                            <div class="col-12 col-lg-9 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_3/info_3_2_02.png" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center mb-6">
+                            <div class="col-12 col-lg-9 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_3/info_3_2_03.png" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto mt-5"> <a href="media/documentos/Anexo_9_Algunos_organismos_que_afectan_cultivos.pdf" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_pdf.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0"><strong>Anexo 9:</strong> Algunos organismos que afectan cultivos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_3">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>3.2 ciclo vida</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <p>El ciclo de vida se refiere al tiempo de vida de un organismo y las diferentes estructuras y fases por las que pasa el individuo a lo largo de este periodo de tiempo.</p>
+                                <p class="mb-4">Es indispensable conocer el ciclo de vida del organismo a controlar para determinar, producto, dosis, tiempos, etc. Los controles deben efectuarse antes de que estas estructuras se forman, por ello se debe estudiar el ciclo de vida de la especie en concreto del cual se va a hacer el control. </p>
+                                <p>El ciclo de vida depende de la especie como se muestra a continuación:</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-6">
+                            <div class="col-12 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_3/img_3_3_01.png" alt="" style="width:100%"></div>
+                        </div>
+                        <div class="row justify-content-center mb-6">
+                            <div class="col-12 col-lg-8 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_3/info_3_3_01.svg" alt="" style="width:100%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="tema_3">
+                    <div class="jumbotron bg-white">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-ecored mt-3">
+                                    <h2>3.3 Umbral de daño</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-6">
+                            <div class="col-12">
+                                <p>Realizados los monitoreos preventivos y detectada la presencia de la plaga, el agente causal de la enfermedad o la mala hierba (arvense), se debe agotar un segundo ciclo de monitoreos para conocer los niveles, porcentajes o cantidad estimada de especímenes o del nivel de afectación. Es importante hacer usar los umbrales de daño económico establecidos por los expertos o aquellos que se han definido con base en la experiencia del encargado del cultivo, bodega o sitio. Estos monitoreos es necesario realizarlos desde antes de establecer los cultivos. </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-6">
+                            <div class="col-12 col-lg-8 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_3/info_3_4_01.svg" alt=""></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Los datos del monitoreo sobre la base del proceso de toma de decisiones. Es en este paso donde se decide qué estrategia de corrección se puede aplicar en el caso de que los umbrales hayan sido sobrepasados, o en caso de que se tenga evidencia para la predicción e importantes daños en el cultivo.</p>
+                                <p>La ejecución de la labor corresponde a un conjunto de actividades de control que se hacen para que el nivel de la plaga o la incidencia de la enfermedad vuelvan a estar bajo el umbral de daño económico, de acuerdo con el MIPE. Dependiendo de estos niveles la intervención debe ser más o menos rigurosa. </p>
+                                <p>Es importante mencionar que la intervención puede contemplar el uso de agroquímicos, pero que esta no es la única herramienta disponible.</p>
+                                <p>Realizadas las labores de control es necesario aplicar otro monitoreo de seguimiento y control como medidas de prevención.</p>
+                                <p>La intención de evaluar el umbral de daño es evitar llegar a daños y por ende controles severos.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center my-5">
+                            <div class="col-12 col-lg-10 d-flex justify-content-center"><img class="img-fluid" src="assets/images/pages/tema_3/info_3_4_02.svg" alt=""></div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto mb-5"> <a href="https://www.ica.gov.co/areas/agricola/servicios/epidemiologia-agricola/plagas-reglamentadas.aspx" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_www.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0">Plagas Reglamentadas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="col-auto"> <a href="media/documentos/Anexo_11_Piramide_de_umbral_de_dano.pdf" target="_blank" style="color:#12263F">
+                                    <div class="jumbotron">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto"><img src="assets/images/icons/icon_pdf.svg" alt="" style="width:35px"></div>
+                                            <div class="col">
+                                                <p class="mb-0"><strong>Anexo 11:</strong> Pirámide de umbral de daño</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p><strong class="mr-2">Ciclo de vida:</strong>es el periodo de tiempo de vida de un organismo, durante el cual pasa o atraviesa por una etapa. </p>
+                        <hr>
+                        <p><strong class="mr-2">Dosis:</strong>es la cantidad de producto a utilizar, que es recomendado para determinado fin.</p>
+                        <hr>
+                        <p><strong class="mr-2">Formulación:</strong>se refiere a la forma o presentación del producto. Existen formulaciones líquidas, sólidas o gaseosas. </p>
+                        <hr>
+                        <p><strong class="mr-2">Mezcla:</strong>la mezcla se refiere a la adición de sustancias en un orden determinado en un mismo recipiente. </p>
+                        <hr>
+                        <p><strong class="mr-2">Plagas: </strong>son considerados en este grupo los organismos no deseados dentro de un cultivo al alcanzar un nivel de daño económico importante. </p>
+                        <hr>
+                        <p><strong class="mr-2">Umbral de daño: </strong>son los diferentes niveles de daño que puede alcanzar un organismo. </p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Material complementario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Autor, (año del documento o material), Nombre del documento o material.</th>
+                                    <th class="text-center">Tipo de material ( Video, capítulo de libro, artículo, otro) </th>
+                                    <th class="text-center" style="width:150px">Enlace del Recurso o Archivo del documento o material</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Decreto 4109 de 2011. Departamento administrativo de la Función Pública. Por el cual se cambia la naturaleza jurídica del Instituto Nacional de Salud -INS y se determina su objeto y estructura. </td>
+                                    <td>PDF</td>
+                                    <td> <a href="media/complementario/DECRETO_4109_DE_2011.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Manual sobre elaboración y empleo de las Especificaciones de la FAO y de la OMS para Plaguicidas (idioma inglés)</td>
+                                    <td>PDF</td>
+                                    <td> <a href="media/complementario/PestSpecsManual.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Resolución N° 2075. Manual Técnico Andino para el Registro y Control de Plaguicidas Químicos de Uso Agrícola</td>
+                                    <td>PDF</td>
+                                    <td> <a href="media/complementario/RESOLUCION_2075.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Decreto 4109 de 2011. [Departamento administrativo de la Función Pública]. Por el cual se cambia la naturaleza jurídica del Instituto Nacional de Salud -INS y se determina su objeto y estructura. 02 de noviembre de 2011.</p>
+                        <hr>
+                        <p>Espinosa, J. 2003. Manual Técnico. Muestreo para el Control de la Calidad de Plaguicidas Agrícolas. Ministerio de Desarrollo Agropecuario. Organismo Internacional Regional de Sanidad Agropecuaria. Panamá. 55 p.</p>
+                        <hr>
+                        <p>ICA.2009. Mis buenas prácticas agrícolas. Ministerio de Agricultura y Desarrollo Rural. Bogotá D.C. 39 p. </p>
+                        <hr>
+                        <p>FAO, OMS. 2010. Manual sobre elaboración y empleo de las Especificaciones de la FAO y de la OMS para Plaguicidas. Roma. Noviembre de 2010. 305 p.</p>
+                        <hr>
+                        <p>Raggio, P. 2018. Orden de mezcla de productos en el tanque de la pulverizadora. Informe Técnico Syngenta.6 P. </p>
+                        <hr>
+                        <p>Ramírez, J. A., &amp; Lacasaña, M. (2001). Plaguicidas: clasificación, uso, toxicología y medición de la exposición. Arch Prev Riesgos Labor, 4(2), 67-75.</p>
+                        <hr>
+                        <p>Resolución 2075 de 2019. [Comisión de la Comunidad Andina]. Manual Técnico Andino para el Registro y Control de plaguicidas químicos de uso agrícola.</p>
+                        <hr>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-md-5 my-4">
+                                <div class="jumbotron p-4">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="text-center pl-4"><i class="fa fa-picture-o fa-2x text-center"></i></p>
+                                        <p class="text-center flex-grow-1">Fotografías y vectores tomados de <a href="https://www.shutterstock.com/" target="_blank">https://www.shutterstock.com/</a> y <a href="https://www.freepik.es/" target="_blank">https://www.freepik.es/</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 my-4">
+                                <div class="jumbotron p-4">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="text-center pl-4"><i class="fa fa-creative-commons fa-2x text-center"></i></p>
+                                        <p class="text-center flex-grow-1">Licencia Creative Commons <br> <strong>CC BY-NC-SA</strong><br> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">Ver licencia.</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzon </strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-6">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <p class="footer-texto mb-2"><strong>Esther Cecilia Ladino López</strong><br /><span class="text-small">Instructor FPI, Agricultura de precisión<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro Agroindustrial del Meta - Sede “Hachón</span><br><span class="text-small">Regional Meta</span></p>
+                        <p class="footer-texto mb-2"><strong>Jorge Andrés Melo Rodríguez</strong><br /><span class="text-small">Instructor Agrícola<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro Agroindustrial del Meta - Sede “Hachón</span><br><span class="text-small">Regional Meta</span></p>
+                        <p class="footer-texto mb-2"><strong>Luz Mila Pacheco Fuentes</strong><br /> <span class="text-small">Diseñador instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Diseño y Metrología</span><br><span class="text-small">Regional Distrito Capital</span></p>
+                        <p class="footer-texto mb-2"><strong>Natalia Andrea Bueno Pizarro</strong><br /> <span class="text-small">Evaluador instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Industria de la Comunicación Gráfica</span><br><span class="text-small">Regional Distrito Capital</span></p>
+                        <p class="footer-texto mb-2"><strong>Julieth Paola Vital López</strong><br /> <span class="text-small">Corrección de estilo<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Industria de la Comunicación Gráfica</span><br><span class="text-small">Regional Distrito Capital </span></p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto"><strong>Leyson Fabian Castaño Perez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto"> <strong>Adriana Rincón Avendaño</strong><br />
+                            <strong>Camilo Andrés Villamizar Lizcano</strong><br />
+                            <strong>Daniel Ricardo Mutis Gómez</strong><br />
+                            <strong>José Jaime Luis Tang Pinzón</strong><br />
+                            <strong>Lady Adriana Ariza Luque</strong><br />
+                            <strong>Maria Camila Ovalle Ospina</strong><br />
+                            <strong>Nelson Iván Vera Briceño</strong><br />
+                            <strong>Oleg Litvin</strong><br />
+                            <strong>Yazmin Rocio Figueroa Pacheco</strong><br />
+                            <strong>Yenny patricia Ulloa Villamizar</strong><br />
+                            <strong>Víctor Raúl Cárdenas Cáceres</strong><br /><span class="text-small">Diseño web & producción audiovisual<br /></span></p>
+                        <p class="footer-texto"><strong>Daniel Ricardo Mutis Gómez</strong><br /> <span class="text-small">Desarrollo front-end<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander</span></p>
+                        <h4 class="footer-subtitulo-2 mt-5">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"><strong>Brayan Steven Pinto Diaz</strong><br />
+                            <strong>Ricardo Alfonso Gonzalez Vargas</strong><br /> <span class="text-small">Validación de recursos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de comercio y servicios </span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center mt-5"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>
